@@ -5,8 +5,8 @@
         <tr>
           <th scope="col" class="px-6 py-3">Цитата</th>
           <th scope="col" class="px-6 py-3">
-            <div class="w-60 pr-4 xl:pr-5">
-              <v-select v-model="state.genre"  @clearSearchOnSelect="filterGenre" :placeholder="'Выберите'" :clearable="false" :options="getGendreList" label="display" class="table__select"></v-select>
+            <div class="w-60 pr-4 xl:pr-5 cursor-pointer">
+              <v-select v-model="state.genre" :filterable="false" :searchable="false"  @option:selected="filterGenre" :placeholder="'Выберите'" :clearable="false" :options="getGendreList" label="display" class="table__select "></v-select>
             </div>
           </th>
           <th scope="col" class="px-6 py-3">
