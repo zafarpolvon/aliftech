@@ -59,7 +59,7 @@
             <td class="px-6 py-4">{{ item.created_at }}</td>
           <td class="px-6 py-4">{{ item.updated_at }}</td>
          
-          <td class="flex items-center px-6 py-4 space-x-3">
+          <td class="flex h-full items-center px-6 py-4 space-x-3">
             <a
               @click="item.editIsOpen = true"
               tag="a"
@@ -68,6 +68,7 @@
             >
             <a
               @click="item.isOpen = true"
+              v-if="state.list.length > 1"
               href="#"
               class="font-medium text-red-600 dark:text-red-500 hover:underline"
               >Удалить</a
